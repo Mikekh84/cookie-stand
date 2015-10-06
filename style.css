@@ -1,0 +1,26 @@
+body {
+  background-color: #FAB0B5;
+  font-family: Georgia;
+}
+
+h1 {
+  color: #8A0606;
+  font-family: 'Great Vibes';
+}
+
+h3 {
+  font-family: Helvetica;
+  color: #470047;
+}
+li {
+  font-family: Georgia;
+  color: #3A003A;
+}
+
+ul {
+  background-color: #E7CBCB;
+}
+
+p {
+  font-family: Georgia;
+}
