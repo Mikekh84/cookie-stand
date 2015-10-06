@@ -190,7 +190,7 @@ bellSq.makeUL(time);
 alki.makeUL(time);
 
 
-
+//Use array with variable i to add each array item to get total.
 
 
 
