@@ -18,15 +18,42 @@ h4 {
   font-family: Helvetica;
 }
 
+
 li {
   font-family: "Courier New";
   color: #3A003A;
 }
 
 ul {
-  background-color: #E7CBCB;
+
 }
 
 p {
   font-family: Georgia;
 }
+
+div.header {
+  background-color:#37CBDB;
+  text-align: center;
+}
+
+
+div.locations {
+  background-color: #E7CBCB;
+  max-width: 200px;
+  float: left;
+}
+
+
+div.cookies {
+  background-color: white;
+  max-width: 700px;
+  float:left;
+  padding-left:20px;
+
+}
+
+div.cookieimg {
+  float: left
+}
+
