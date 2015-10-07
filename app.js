@@ -1,4 +1,4 @@
-var time = ['10 am', '11 am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+var time = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
 var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulElement) {
   this.place = place;
@@ -11,7 +11,7 @@ var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulEle
 
   this.randomCust = function() {
     return Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1) + this.minCustHour);
-  };
+   };
 
   this.cookiesPerHour = function() {
     return Math.floor(this.randomCust(this.maxCustHour, this.minCustHour) * this.avgCookieCust);
