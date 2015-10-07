@@ -47,19 +47,27 @@ var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulEle
 
 };
 var pikePlace = new cookieStand('Pike Place Market', 17, 88, 5.2, 'pike');
-// var seaTac =  new cookieStand('Seatac Airport', 6, 44, 1.2);
-// var southcenter = new cookieStand('Southcenter Mall', 11, 38, 1.9);
-// var bellSq = new cookieStand('Bellevue Square Mall', 20, 48, 3.3);
-// var alki = new cookieStand('Alki Beach', 3, 24, 2.6);
+var seaTac =  new cookieStand('Seatac Airport', 6, 44, 1.2, 'seatac');
+var southcenter = new cookieStand('Southcenter Mall', 11, 38, 1.9, 'southcenter');
+var bellSq = new cookieStand('Bellevue Square Mall', 20, 48, 3.3, 'bellSq');
+var alki = new cookieStand('Alki Beach', 3, 24, 2.6, 'alki');
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 pikePlace.totalCookiesDay();
 pikePlace.makeUL(time);
-// seaTac.makeUL(time);
-// southcenter.makeUL(time);
-// bellSq.makeUL(time);
-// alki.makeUL(time);
+
+seaTac.totalCookiesDay();
+seaTac.makeUL(time);
+
+southcenter.totalCookiesDay();
+southcenter.makeUL(time);
+
+bellSq.totalCookiesDay();
+bellSq.makeUL(time);
+
+alki.totalCookiesDay();
+alki.makeUL(time);
 
 
 //Use array with variable i to add each array item to get total.
