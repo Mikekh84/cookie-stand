@@ -88,3 +88,8 @@ div.events {
   border-radius: 10px;
 
 }
+
+fieldset{
+  max-width: 180px;
+  border-radius: 10px;
+}
