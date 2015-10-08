@@ -1,16 +1,21 @@
+/*Table of Contents - Example
+H tags
+Div Tags*/
+
+
 body {
   background-color: #FAB0B5;
-  font-family: Georgia;
 }
 
 h1 {
   color: #8A0606;
   font-family: 'Great Vibes';
+  font-size: 300%;
 
 }
 
 h2 {
-  font-family: Courier;
+  font-family: Helvetica;
   color: #470047;
 }
 
@@ -18,15 +23,68 @@ h4 {
   font-family: Helvetica;
 }
 
+h5 {
+  font-family: 'Great Vibes';
+  font-size: 300%;
+  padding-bottom: 1%;
+
+}
+
+
 li {
   font-family: "Courier New";
   color: #3A003A;
+  padding-bottom: 6px;
+  text-align:left;
 }
 
 ul {
-  background-color: #E7CBCB;
+  list-style-type: none;
 }
 
 p {
   font-family: Georgia;
+}
+
+div.header {
+  background-color:#37CBDB;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 0px;
+
+}
+
+
+div.locations {
+  background-color: #E7CBCB;
+  max-width: 200px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 10px;
+
+}
+
+
+div.cookies {
+  background-color: white;
+  max-width: 850px;
+  float:left;
+  padding-left:20px;
+  padding-right: 1px;
+  border-radius: 10px;
+
+}
+
+div.cookieimg {
+  float: left
+}
+
+div.events {
+  float: right;
+  background-color: #E7CBCB;
+  padding-left: 6px;
+  padding-bottom: 10%;
+  margin-left: 1px;
+  border-radius: 10px;
+
 }
