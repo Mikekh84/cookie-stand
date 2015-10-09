@@ -25,79 +25,28 @@ var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulEle
     };
   };
 
-  this.makeUL = function(time) {
-    var totalC = document.getElementById(this.ulElement + 'Total');
-    totalC.appendChild(document.createTextNode('The Daily Total: ' + this.dailyCookies + ' Cookies'));
-           // connect the list to the JS; this is where your list will appear
-        var locationList = document.getElementById(this.ulElement);
+  this.makeTable = function(time) {
+    var totalC = document.getElementById(this.ulElement);
+    var cookieStand = document.getElementById(this.ulElement);
+
+    cookieStand.appendChild(document.createTextNode(this.place)); //createsTD
     for(var i = 0; i < time.length; i++) {
+    var locationList = document.getElementById(this.ulElement);
+    var item = document.createElement('td');
 
-        // connect the list to the JS; this is where your list will appear
-        var locationList = document.getElementById(this.ulElement);
+    item.appendChild(document.createTextNode(this.cookiesByHourList[i]));
+    locationList.appendChild(item);
+    };//end for loop
+     totalC.appendChild(document.createTextNode(this.dailyCookies));
+  }; // end of makeTable
+  this.totalCookiesDay(time);
+  this.makeTable(time);
+}; // end of object
 
-        // Create the list item:
-        var item = document.createElement('li');
-
-        // Set its contents:
-        item.appendChild(document.createTextNode(time[i] + ": " + this.cookiesByHourList[i] + ' cookies' ));
-        // Add it to the list:
-        locationList.appendChild(item);
-    };
-  };
-
-};
 var pikePlace = new cookieStand('Pike Place Market', 17, 88, 5.2, 'pike');
 var seaTac =  new cookieStand('Seatac Airport', 6, 44, 1.2, 'seatac');
 var southcenter = new cookieStand('Southcenter Mall', 11, 38, 1.9, 'southcenter');
-var bellSq = new cookieStand('Bellevue Square Mall', 20, 48, 3.3, 'bellSq');
+var bellSq = new cookieStand('Bell. Square Mall', 20, 48, 3.3, 'bellSq');
 var alki = new cookieStand('Alki Beach', 3, 24, 2.6, 'alki');
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-pikePlace.totalCookiesDay();
-pikePlace.makeUL(time);
-
-seaTac.totalCookiesDay();
-seaTac.makeUL(time);
-
-southcenter.totalCookiesDay();
-southcenter.makeUL(time);
-
-bellSq.totalCookiesDay();
-bellSq.makeUL(time);
-
-alki.totalCookiesDay();
-alki.makeUL(time);
-
-
-//Use array with variable i to add each array item to get total.
-// makeUL: function(time) {
-
-//     for(var i = 0; i < time.length; i++) {
-
-//         // connect the list to the JS; this is where your list will appear
-//         var locationList = document.getElementById('pike');
-
-//         // Create the list item:
-//         var item = document.createElement('li');
-
-//         // Set its contents:
-//         item.appendChild(document.createTextNode(time[i] + ": " + this.cookiesPerHour() + ' cookies' ));
-//         // Add it to the list:
-//         locationList.appendChild(item);
-
-//         // var cookieTotal = document.createElement('li');
-//         // cookieTotal.appendChild(document.createTextNode(this.totalCookiesDay()));
-//         // locationList.appendChild(cookietotal);
-//         // return locationList;
-
-//     };
-
-//     // Finally, return the constructed list:
-//    // return locationList;
-//   }
-// };
-
-
-
-
