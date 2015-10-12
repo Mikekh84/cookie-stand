@@ -27,21 +27,31 @@ var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulEle
 
   this.makeTable = function(time) {
     var totalC = document.getElementById(this.ulElement);
-    var cookieStand = document.getElementById(this.ulElement);
 
-    cookieStand.appendChild(document.createTextNode(this.place)); //createsTD
+    var table = document.getElementById('standTime');
+
+
+    table.appendChild(document.createElement('tr'));
+    table.appendChild(document.createTextNode(this.place));
+
     for(var i = 0; i < time.length; i++) {
-    var locationList = document.getElementById(this.ulElement);
+    var locationList = document.getElementById('standTime');
     var item = document.createElement('td');
 
     item.appendChild(document.createTextNode(this.cookiesByHourList[i]));
     locationList.appendChild(item);
     };//end for loop
-     totalC.appendChild(document.createTextNode(this.dailyCookies));
+
+
+    table.appendChild(document.createTextNode(this.dailyCookies));
 
   }; // end of makeTable
   this.totalCookiesDay(time);
   this.makeTable(time);
+
+
+
+
 }; // end of object
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -51,29 +61,32 @@ var southcenter = new cookieStand('Southcenter Mall', 11, 38, 1.9, 'southcenter'
 var bellSq = new cookieStand('Bell. Square Mall', 20, 48, 3.3, 'bellSq');
 var alki = new cookieStand('Alki Beach', 3, 24, 2.6, 'alki');
 
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 var storeData = function(e) {
-  e.preventDefault();
 
-  var stand = document.getElementById("stand");
+
+  var place = document.getElementById("place");
   var maxCustHour = document.getElementById("maxCustHour");
   var minCustHour = document.getElementById("minCustHour");
   var avgCookieCust = document.getElementById("avgCookieCust");
-  var storeID = document.getElementById("ulElement");
+  var storeID = document.getElementById("storeID");
 
-  if (!stand.value || !maxCustHour.value || !minCustHour.value || !avgCookieCust.value) {
+  e.preventDefault();
+
+  if (!place.value || !maxCustHour.value || !minCustHour.value || !avgCookieCust.value) {
     return alert('Please enter a value in each box.');
-  };
-
-  console.log(stand.value);
+  } else{
+  console.log(place.value);
   console.log(maxCustHour.value);
   console.log(minCustHour.value);
   console.log(avgCookieCust.value);
+  console.log(storeID.value);
 
+  var newStand = new cookieStand(place.value, minCustHour.value, maxCustHour.value, avgCookieCust.value, storeID.value)
 
-  var newStand = new cookieStand(stand.value, minCustHour.value, maxCustHour.value, avgCookieCust.value, storeID.value);
+};
 
 
 
@@ -84,6 +97,9 @@ var storeData = function(e) {
 
 }; // end store data function
 
+
+
 var addButton = document.getElementById("addButton");
 addButton.addEventListener("click", storeData);
+
 
