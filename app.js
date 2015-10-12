@@ -38,11 +38,13 @@ var cookieStand = function(place, minCustHour, maxCustHour, avgCookieCust, ulEle
     locationList.appendChild(item);
     };//end for loop
      totalC.appendChild(document.createTextNode(this.dailyCookies));
+
   }; // end of makeTable
   this.totalCookiesDay(time);
   this.makeTable(time);
 }; // end of object
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 var pikePlace = new cookieStand('Pike Place Market', 17, 88, 5.2, 'pike');
 var seaTac =  new cookieStand('Seatac Airport', 6, 44, 1.2, 'seatac');
 var southcenter = new cookieStand('Southcenter Mall', 11, 38, 1.9, 'southcenter');
@@ -50,3 +52,38 @@ var bellSq = new cookieStand('Bell. Square Mall', 20, 48, 3.3, 'bellSq');
 var alki = new cookieStand('Alki Beach', 3, 24, 2.6, 'alki');
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+var storeData = function(e) {
+  e.preventDefault();
+
+  var stand = document.getElementById("stand");
+  var maxCustHour = document.getElementById("maxCustHour");
+  var minCustHour = document.getElementById("minCustHour");
+  var avgCookieCust = document.getElementById("avgCookieCust");
+  var storeID = document.getElementById("ulElement");
+
+  if (!stand.value || !maxCustHour.value || !minCustHour.value || !avgCookieCust.value) {
+    return alert('Please enter a value in each box.');
+  };
+
+  console.log(stand.value);
+  console.log(maxCustHour.value);
+  console.log(minCustHour.value);
+  console.log(avgCookieCust.value);
+
+
+  var newStand = new cookieStand(stand.value, minCustHour.value, maxCustHour.value, avgCookieCust.value, storeID.value);
+
+
+
+// stand.value = null;
+// minCustHour.value = null;
+// maxCustHour.value = null;
+// avgCookieCust.value = null;
+
+}; // end store data function
+
+var addButton = document.getElementById("addButton");
+addButton.addEventListener("click", storeData);
+
