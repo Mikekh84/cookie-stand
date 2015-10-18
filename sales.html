@@ -9,60 +9,62 @@
 <h1> Pat's Salmon Cookie Stand</h1>
   <img src="img/salmon.png" width="300" alt="Salmon Logo" title="Salmon Logo" />
 
-  <h2>Pike Place</h2>
-  <h4 id="pikeTotal"></h4>
-  <ul id="pike"></ul>
-
-  <h2>Seatac Airport</h2>
-  <h4 id="seatacTotal"></h4>
-  <ul id="seatac"></ul>
-
-  <h2>Southcenter Mall</h2>
-  <h4 id="southcenterTotal"></h4>
-  <ul id="southcenter"></ul>
-
-  <h2>Bellevue Square Mall</h2>
-  <h4 id="bellSqTotal"></h4>
-  <ul id="bellSq"></ul>
-
-  <h2>Alki</h2>
-  <h4 id="alkiTotal"></h4>
-  <ul id="alki"></ul>
-
-<form>
-
-<fieldset>
-
-<legend>Add New Location</legend>
-
- <p>
-    <label for="place">New Location</label><br />
-    <input type="text" name="place" >
- </p>
-
- <p>
-    <label for="minCustHour">Min Customer</label><br />
-    <input type="text" name="minCustHour" >
- </p>
-
- <p>
-    <label for="maxCustHour">Max Customer</label><br />
-    <input type="text" name="maxCustHour" >
- </p>
-
- <p>
-    <label for="avgCookieCust">Avg Cookies/Cust</label><br />
-    <input type="text" name="avgCookieCust" >
- </p>
-
- <Button type="click">Submit New Location</Button>
- </fieldset>
+  <table id="standTime">
+    <th>Location</th>
+    <th>10AM</th>
+    <th>11AM</th>
+    <th>12PM</th>
+    <th>1PM</th>
+    <th>2PM</th>
+    <th>3PM</th>
+    <th>4PM</th>
+    <th>5PM</th>
+    <th>Total</th>
+    <tr id="pike"></tr>
+    <tr id="seatac"></tr>
+    <tr id="southcenter"></tr>
+    <tr id="bellSq"></tr>
+    <tr id="alki"></tr>
+    <tr id="ulElement"></tr>
+  </table>
 
 
+<form id="newStandForm">
 
+  <fieldset>
+
+  <legend>Add New Location</legend>
+
+   <p>
+      <label for="place">New Location</label><br />
+      <input type="text" id="place" />
+   </p>
+
+   <p>
+      <label for="minCustHour">Min Customer</label><br />
+      <input type="text" id="minCustHour" />
+   </p>
+
+   <p>
+      <label for="maxCustHour">Max Customer</label><br />
+      <input type="text" id="maxCustHour" />
+   </p>
+
+   <p>
+      <label for="avgCookieCust">Avg Cookies/Cust</label><br />
+      <input type="text" id="avgCookieCust" />
+   </p>
+
+   <p>
+      <label for="Store ID">Store ID</label>
+      <input type="text" id="storeID" />
+    </p>
+
+   <button type="click" id="addButton">Submit New Location</button>
+   </fieldset>
 </form>
-  <!-- <h2>Titles</h2>
-        <uL class="menu" id="location"></ul> -->
+
+
 
   <script src="app.js"></script>
 
